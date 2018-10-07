@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EnjoyArts</string>
+    <string name="welcome">Bienvenido!!!</string>
+    <string name="button_start">Comenzamos</string>
+    <string name="select">¿Qué prefieres?</string>
+    <string name="img_enjoyart" />
+    <string name="img_enjoyart_pq" />
+    <string name="who_are_you">Escribe tu nombre, por favor</string>
+    <string name="expression1">Pintura</string>
+    <string name="expression2">Escultura</string>
+    <string name="button_apply">aplicamos</string>
+
+</resources>
