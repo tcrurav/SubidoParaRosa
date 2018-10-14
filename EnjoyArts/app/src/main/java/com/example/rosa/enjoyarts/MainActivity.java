@@ -3,6 +3,7 @@ package com.example.rosa.enjoyarts;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -23,7 +24,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ejecutar_buttonStart (View view){
+        EditText editText_name = (EditText) findViewById(R.id.editText_name);
+        String name = editText_name.getText().toString();
+
+        // TIBURCIO: Aquí empieza la validación
+
+        editText_name.setError(null);
+        if(TextUtils.isEmpty(name)){
+            editText_name.setError("Está vacío");
+            editText_name.setFocusable(true);
+            return;
+        }
+
+        // TIBURCIO: Si llega aquí es que he pasado la validación y por tanto se va a la siguiente actividad
+
         Intent intent_start = new Intent(this, ArtisticExpression.class);
+        intent_start.putExtra("name", name); // TIBURCIO: Esta línea es para pasar "name" a la actividad ArtisticExpression
         startActivity(intent_start);
     }
 }

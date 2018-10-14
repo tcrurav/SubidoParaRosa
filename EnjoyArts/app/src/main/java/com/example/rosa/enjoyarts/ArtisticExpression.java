@@ -45,6 +45,10 @@ public class ArtisticExpression extends Activity {
             }
         });
 
+        // TIBURCIO: Aquí recojo el parámetro pasado desde MainActivity y lo muestro por pantalla a modo de ejemplo
+        String name = getIntent().getExtras().getString("name");
+        Toast.makeText(this, "El mensaje pasado es: " + name, Toast.LENGTH_LONG).show();
+
     }
 
 
